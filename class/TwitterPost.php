@@ -18,13 +18,13 @@ class TwitterPost
 		);
 		
 		$url 		= $this->conf_array['url_postStatusUpdate'];
-
-		$twitter 	= new TwitterAPIExchange($settings);
-		
-		$requestMethod 	= 'POST';
-		$postfields 	= array('status' => $message); 
 		try
 		{
+			$twitter 	= new TwitterAPIExchange($settings);
+		
+			$requestMethod 	= 'POST';
+			$postfields 	= array('status' => $message); 
+		
 			$twitter->buildOauth($url, $requestMethod)
 			->setPostfields($postfields)
 			->performRequest();
