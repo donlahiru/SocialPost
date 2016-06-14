@@ -1,7 +1,7 @@
 <?php
 //define root path
 $currentFolder = explode('/',$_SERVER['PHP_SELF']);
-define("MAIN_ROOT",$_SERVER['DOCUMENT_ROOT'].'/'.$currentFolder[1].'/');
+define("MAIN_ROOT",$_SERVER['DOCUMENT_ROOT'].'/'.$currentFolder[1]);
 
 require_once MAIN_ROOT.'/vendor/autoload.php';
 
